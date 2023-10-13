@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import BigFeature from "../components/BigFeature";
 import Feature from "../components/Feature";
 import Nbar from "../components/Nbar";
@@ -36,16 +36,11 @@ const nOffers = (val) => {
 };
 
 const Home = () => {
-    const [data, setData] = useState('');
-    const HandleChild = (itemsearched)=> {
-        setData(itemsearched);
-    }
-    console.log(data);
     return (
         <div>
             <Nbar />
             <Header />
-            <Feature onDataFromChild={HandleChild}/>
+            <Feature />
             <div className="card-section">
                 <h1 className="text-center" style={{ marginBottom: "3rem", color: "var(--primary-text-color)" }}>
                     Top Destinations

@@ -4,7 +4,7 @@ import Card from "react-bootstrap/Card";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import "../style/tour.css";
-// import tour from "../videos/tour.mp4"
+import tour from "../videos/tour.mp4"
 
 const Tour = () => {
   return (
@@ -12,7 +12,7 @@ const Tour = () => {
       <Card style={{ width: "70rem", height: "40rem", margin: "auto" }}>
         <Row noGutters>
           <Col xs={6}>
-            {/* <video src={tour} autoPlay controls loop style={{width: "100%", height: "40rem"}}></video> */}
+            <video src={tour} autoPlay controls loop style={{width: "100%", height: "40rem"}}></video>
           </Col>
           <Col xs={6}>
             <Card.Body style={{paddingBlock: "5rem"}}>
