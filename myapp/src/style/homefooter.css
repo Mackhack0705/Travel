@@ -10,12 +10,15 @@
     
 }
 
-
 td {
     padding-left: 2%;
-    padding: 1% 2%;
+    padding: 0.5% 2%;
 }
 
 td a {
     color: var(--secondary-text-color) !important;
+}
+
+.contact-logo {
+    margin: 0.5rem;
 }

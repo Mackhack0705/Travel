@@ -21,18 +21,20 @@ const FlightSearch = () => {
                         <Card key={item.id} className='table-row' style={{ width: "65rem", height: "8rem" }}>
                         <Row noGutters>
                         <Col>
+                            <Card.Body>{item.airlineName}</Card.Body>
+                        </Col>
+                        <Col>
                             <Card.Body>{item.destination}</Card.Body>
                         </Col>
                         <Col>
                             <Card.Body>{item.departureDate}</Card.Body>
-                        {/* <FaArrowsAlt style={{display: "inline"}}/> */}
                         </Col>
                         
                         <Col>
                             <Card.Body>{item.returnDate}</Card.Body>
                         </Col>
                         <Col>
-                            <Card.Body>$ {item.price}</Card.Body>
+                            <Card.Body>$ {item.ticketPrice}</Card.Body>
                         </Col>
                         <Col>
                         <Button variant="warning" style={{color: "#ffff", position: "relative", top: "10px", borderRadius: "50px"}}>Book now</Button>

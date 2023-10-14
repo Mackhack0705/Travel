@@ -18,7 +18,7 @@
 }
 .search-input {
     padding: 5px 15px;
-    color: #ffff;
+    color: #ffff ;
     background: transparent;
     background-repeat: no-repeat;
     background-size: 25px 25px;
@@ -27,5 +27,9 @@
     height: 2.4rem;
     width: 12rem;
     border-radius: 5px;
+}
+
+.search-input::placeholder{
+    color: #ffff !important;
 }
 
