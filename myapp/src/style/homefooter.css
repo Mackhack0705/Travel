@@ -22,3 +22,6 @@ td a {
 .contact-logo {
     margin: 0.5rem;
 }
+.footer-table tr th {
+    padding-left: 1rem;
+}

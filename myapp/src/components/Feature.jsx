@@ -1,29 +1,52 @@
 import React, { useState } from "react";
 import "../style/feature.css";
 import { useDispatch } from 'react-redux'
-import { filterSearch } from "../feature/searchSlice";
+import { flightSearch, hotelSearch } from "../feature/searchSlice";
+import { flightSelect, hotelSelect } from "../feature/featureSlice"
 import { useNavigate } from 'react-router-dom'
+import { store } from '../app/store'
 
 const Feature = () => {
   const [input, setInput] = useState('');
+  const [activeSection, setActiveSection] = useState(false);
   const dispatch = useDispatch();
   const navigate = useNavigate();
+
+  // const actSec = useSelector(state => state.feature.select)
+  // console.log(actSec);
 
   const HandleClick = (e) => {
     e.preventDefault();
 
-    dispatch(filterSearch(input))
+    // setActiveSection(section);
+    if(activeSection === false) {
+      dispatch(hotelSearch(input))
+    } else {
+      dispatch(flightSearch(input))
+    }
     setInput('');
     navigate('/flight-Search');
+  }
+  
+  const HandleHotels = () => {
+    setActiveSection(false);
+    dispatch(hotelSelect())
+  }
+
+  const HandleFlights = () => {
+    setActiveSection(true)
+    dispatch(flightSelect())
   }
 
   return (
     <form onSubmit={HandleClick}>
       <div className="feature-section">
-        <div className="hotel-section">
+        <div className={`hotel-section ${activeSection === false ? "active" : "inactive"}`} 
+          onClick={HandleHotels}>
           <p>Hotels</p>
         </div>
-        <div className="flight-section">
+        <div className={`flight-section ${activeSection === true ? "active" : "inactive"}`} 
+        onClick={HandleFlights}>
           <p>Flights</p>
         </div>
 

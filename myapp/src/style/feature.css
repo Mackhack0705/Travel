@@ -12,7 +12,7 @@
     height: 100%;
     display: inline-block;
     width: 50%;
-    background-color: var(--primary-btn-color);
+    /* background-color: var(--primary-btn-color); */
     padding-top: 1.5rem;
     border-top-left-radius: 50px;
 }
@@ -25,6 +25,14 @@
     border-top-right-radius: 50px;
 }
 
+.active {
+    background-color: var(--primary-btn-color);
+}
+
+.inactive {
+    background-color: white;
+}
+
 .search-section {
     background: linear-gradient(45deg, #ff9900, #a333ff);
     padding: 2rem 25rem;
@@ -34,14 +42,16 @@ input {
     margin: 10px !important;
     padding: 5px;
 }
+
 .destination::placeholder {
     color: rgb(0, 0, 0) !important;
 }
 
-th {
-    padding-left: 2rem;
+.search-section table thead tr th {
+    padding-left: 1.5rem;
     text-align: left !important;
 }
+
 .destination {
     height: 2rem;
     width: 15rem;
