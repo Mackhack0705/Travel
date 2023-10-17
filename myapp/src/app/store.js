@@ -1,11 +1,13 @@
 import { configureStore, combineReducers } from '@reduxjs/toolkit'
 import searchReducer from '../feature/searchSlice'
-import featureReducer from '../feature/featureSlice'
+import flightReducer from '../feature/flightSlice'
+import hotelReducer from '../feature/hotelSlice'
 
 export const store = configureStore({
     reducer: combineReducers({
         search: searchReducer,
-        feature: featureReducer,
+        flight: flightReducer,
+        hotel: hotelReducer,
     }),
 
 });

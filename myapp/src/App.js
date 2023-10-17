@@ -1,5 +1,5 @@
 import "./App.css";
-import FlightSearch from "./pages/FlightSearch";
+import FeatureSearch from "./pages/FeatureSearch";
 import Home from "./pages/Home";
 import LoginForm from "./pages/LoginForm";
 import SignUp from "./pages/SignUp";
@@ -13,7 +13,7 @@ function App() {
                 <Route path='/' element={<Home />} />
                 <Route path='/login-form' element={<LoginForm />} />
                 <Route path='/signup-form' element={<SignUp />} />
-                <Route path='/flight-Search' element={<FlightSearch />}></Route>
+                <Route path="/flight-Search" element={<FeatureSearch />} />
             </Routes>
         </Router>
     </div>

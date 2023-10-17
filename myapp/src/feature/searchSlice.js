@@ -19,7 +19,7 @@ export const searchSlice = createSlice({
             state.searchData = [];
 
             const filteredData = FlightData.filter((flight) => flight.destination.toLowerCase().includes(input.text.toLowerCase()))
-            state.searchData = filteredData.length > 0 ? filteredData : undefined;
+            state.searchData = filteredData.length > 0 ? filteredData : [];
         },
         hotelSearch: (state, action) => {
             const input = {
@@ -29,13 +29,16 @@ export const searchSlice = createSlice({
 
             state.searchData = [];
 
-            const filteredData = HotelData.filter((hotel) => hotel.destination.toLowerCase().includes(input.text.toLowerCase()))
-            state.searchData = filteredData.length > 0 ? filteredData : undefined;
-        }
+            const filteredData = HotelData.filter((hotel) => hotel.hotelDestination.toLowerCase().includes(input.text.toLowerCase())) 
+            state.searchData = filteredData.length > 0 ? filteredData : [];
+        },
+        resetSearch: (state,action) => {
+            state.searchData = action.payload;
+        },
     }
 })
 
 
-export const { flightSearch, hotelSearch } = searchSlice.actions
+export const { flightSearch, hotelSearch, resetSearch } = searchSlice.actions
 
 export default searchSlice.reducer

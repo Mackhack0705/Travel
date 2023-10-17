@@ -1,25 +1,29 @@
 import React, { useState } from "react";
 import "../style/feature.css";
-import { useDispatch } from 'react-redux'
-import { flightSearch, hotelSearch } from "../feature/searchSlice";
-import { flightSelect, hotelSelect } from "../feature/featureSlice"
+import { useDispatch, useSelector } from 'react-redux'
+import { flightSearch, hotelSearch, resetSearch } from "../feature/searchSlice";
+import { setFlight } from "../feature/flightSlice";
+import { setHotel } from "../feature/hotelSlice";
 import { useNavigate } from 'react-router-dom'
-import { store } from '../app/store'
+import FlightData from "../components/flightdata"
+import HotelData from "../components/hoteldata"
 
 const Feature = () => {
   const [input, setInput] = useState('');
-  const [activeSection, setActiveSection] = useState(false);
+  // const [activeSection, setActiveSection] = useState(false);
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
-  // const actSec = useSelector(state => state.feature.select)
-  // console.log(actSec);
+  const isFlightSelected = useSelector(state => state.flight.flightSelect)
+  console.log(isFlightSelected);
+
+  const isHotelSelected = useSelector(state => state.hotel.hotelSelect)
+  console.log(isHotelSelected);
 
   const HandleClick = (e) => {
     e.preventDefault();
-
     // setActiveSection(section);
-    if(activeSection === false) {
+    if(isHotelSelected === true) {
       dispatch(hotelSearch(input))
     } else {
       dispatch(flightSearch(input))
@@ -29,23 +33,27 @@ const Feature = () => {
   }
   
   const HandleHotels = () => {
-    setActiveSection(false);
-    dispatch(hotelSelect())
+    // setActiveSection(false);
+    dispatch(setHotel(true))
+    dispatch(setFlight(false))
+    dispatch(resetSearch(HotelData))
   }
 
   const HandleFlights = () => {
-    setActiveSection(true)
-    dispatch(flightSelect())
+    // setActiveSection(true)
+    dispatch(setFlight(true))
+    dispatch(setHotel(false))
+    dispatch(resetSearch(FlightData))
   }
 
   return (
     <form onSubmit={HandleClick}>
       <div className="feature-section">
-        <div className={`hotel-section ${activeSection === false ? "active" : "inactive"}`} 
+        <div className={`hotel-section ${isHotelSelected === true ? "active" : "inactive"}`} 
           onClick={HandleHotels}>
           <p>Hotels</p>
         </div>
-        <div className={`flight-section ${activeSection === true ? "active" : "inactive"}`} 
+        <div className={`flight-section ${isFlightSelected === true ? "active" : "inactive"}`} 
         onClick={HandleFlights}>
           <p>Flights</p>
         </div>
@@ -74,7 +82,7 @@ const Feature = () => {
             </tbody>
           </table>
 
-          <button type="submit" className="primary-button search">Search</button>
+          <button type="submit" className="primary-button search" >Search</button>
         </div>
       </div>
     </form>
