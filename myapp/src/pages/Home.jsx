@@ -35,10 +35,10 @@ const nOffers = (val) => {
     );
 };
 
-const Home = () => {
+const Home = ({ isLoggedIn }) => {
     return (
-        <div>
-            <Nbar />
+        <div className='home'>
+            <Nbar isLoggedIn={isLoggedIn}/>
             <Header />
             <Feature />
             <div className="card-section">

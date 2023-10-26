@@ -1,6 +1,4 @@
-import { createSlice, nanoid } from '@reduxjs/toolkit'
-import FlightData from "../components/flightdata"
-import HotelData from "../components/hoteldata"
+import { createSlice } from '@reduxjs/toolkit'
 
 const initialState = {
     searchData: [],
@@ -11,25 +9,17 @@ export const searchSlice = createSlice({
     initialState,
     reducers: {
         flightSearch: (state, action) => {
-            const input = {
-                id: nanoid(),
-                text: action.payload,
-            }
+            const filteredData = action.payload;
 
             state.searchData = [];
 
-            const filteredData = FlightData.filter((flight) => flight.destination.toLowerCase().includes(input.text.toLowerCase()))
             state.searchData = filteredData.length > 0 ? filteredData : [];
         },
         hotelSearch: (state, action) => {
-            const input = {
-                id: nanoid(),
-                text: action.payload,
-            }
-
+            const filteredData = action.payload; 
+            
             state.searchData = [];
 
-            const filteredData = HotelData.filter((hotel) => hotel.hotelDestination.toLowerCase().includes(input.text.toLowerCase())) 
             state.searchData = filteredData.length > 0 ? filteredData : [];
         },
         resetSearch: (state,action) => {

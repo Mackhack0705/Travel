@@ -5,8 +5,8 @@ import { flightSearch, hotelSearch, resetSearch } from "../feature/searchSlice";
 import { setFlight } from "../feature/flightSlice";
 import { setHotel } from "../feature/hotelSlice";
 import { useNavigate } from 'react-router-dom'
-import FlightData from "../components/flightdata"
-import HotelData from "../components/hoteldata"
+import axios from "axios";
+
 
 const Feature = () => {
   const [input, setInput] = useState('');
@@ -20,30 +20,81 @@ const Feature = () => {
   const isHotelSelected = useSelector(state => state.hotel.hotelSelect)
   console.log(isHotelSelected);
 
+  // Function to fetch flightData from api
+  const fetchflightdata = async () => {
+    try {
+      const response = await axios.get(`/items/flight/search?destination=${input}`);
+      if (response.data) {
+        const FlightData = await response.data;
+        // Dispatch the flightSearch action with the fetched data
+        dispatch(flightSearch(FlightData));
+      } else {
+        // Handle the API request error
+        dispatch(flightSearch([]));
+        console.error('Failed to fetch flight data.');
+      }
+    } catch (error) {
+
+      console.error('An error occurred while fetching flight data:', error);
+    }
+  }
+  // Function to fetch flightData from api
+  const fetchhoteldata = async () => {
+    try {
+      const response = await axios.get(`/items/hotel/search?destination=${input}`);
+      console.log(response);
+      if (response.data) {
+        const HotelData = await response.data;
+        // Dispatch the flightSearch action with the fetched data
+        dispatch(hotelSearch(HotelData));
+      } else {
+        // Handle the API request error
+        dispatch(hotelSearch([]));
+        console.error('Failed to fetch flight data.');
+      }
+    } catch (error) {
+      console.error('An error occurred while fetching flight data:', error);
+    }
+  }
+
   const HandleClick = (e) => {
     e.preventDefault();
     // setActiveSection(section);
     if(isHotelSelected === true) {
-      dispatch(hotelSearch(input))
+      fetchhoteldata();
     } else {
-      dispatch(flightSearch(input))
+      fetchflightdata();
     }
     setInput('');
     navigate('/flight-Search');
   }
   
-  const HandleHotels = () => {
-    // setActiveSection(false);
-    dispatch(setHotel(true))
-    dispatch(setFlight(false))
-    dispatch(resetSearch(HotelData))
+  const HandleHotels = async () => {
+    try {
+      const res = await axios.get('/items/hotel/allitems');
+      console.log(res.data);
+      const HotelData = await res.data;
+      // setActiveSection(false);
+      dispatch(setHotel(true))
+      dispatch(setFlight(false))
+      dispatch(resetSearch(HotelData))
+    } catch (error) {
+      console.error('An error occurred while fetching hotel data:', error);
+    }
   }
 
-  const HandleFlights = () => {
-    // setActiveSection(true)
-    dispatch(setFlight(true))
-    dispatch(setHotel(false))
-    dispatch(resetSearch(FlightData))
+  const HandleFlights = async () => {
+    try {
+      const res = await axios.get('/items/flight/allitems');
+      console.log(res.data);
+      const FlightData = await res.data;
+      // setActiveSection(false);
+      dispatch(setFlight(true))
+      dispatch(setHotel(false))
+      dispatch(resetSearch(FlightData))
+    } catch (error) {
+      console.error('An error occurred while fetching flight data:', error);
+    }
   }
 
   return (

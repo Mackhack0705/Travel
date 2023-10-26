@@ -57,7 +57,7 @@ const FeatureSearch = () => {
         if (searchData && searchData.length > 0) {
             return searchData.map((item) => (
                 // Your hotel mapping logic
-                <Card key={item.id} className='table-row' style={{ width: '65rem', height: '8rem' }}>
+                <Card key={item.id} className='table-row' style={{ width: '65rem', height: '10rem' }}>
                     <Row noGutters>
                         <Col>
                             <Card.Body>{item.hotelName}</Card.Body>
@@ -88,9 +88,9 @@ const FeatureSearch = () => {
     };
 
 
-    const renderNoResultsFound = () => (
-        <div style={{ textAlign: 'center', fontSize: '5rem' }}>No results Found</div>
-    );
+    // const renderNoResultsFound = () => (
+    //     <div style={{ textAlign: 'center', fontSize: '5rem' }}>No results Found</div>
+    // );
     return (
         <div className='flight-Search'>
             <Feature />
