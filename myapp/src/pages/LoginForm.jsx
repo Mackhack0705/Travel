@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import '../pages-style/login.css'
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import { BASE_URL } from '../services/helper';
 
 const LoginForm = ({ setIsLoggedIn }) => {
   const navigate = useNavigate();
@@ -20,7 +21,7 @@ const LoginForm = ({ setIsLoggedIn }) => {
       e.preventDefault();
       console.log(formData);
 
-      const response = await axios.post("/users/login", formData);
+      const response = await axios.post(`${BASE_URL}/users/login`, formData);
       // Handle the response from the server, e.g., save the token and redirect the user
       const token = response.data.token;
 
