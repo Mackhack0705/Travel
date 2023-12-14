@@ -9,6 +9,7 @@ import Offer_data from "../components/offerdata";
 import Header from "../components/Header";
 import Customers from "../components/Customers";
 import HomeFooter from "../components/HomeFooter";
+import "../pages-style/home.css"
 
 
 const nCards = (val) => {
@@ -42,24 +43,24 @@ const Home = ({ isLoggedIn }) => {
             <Header />
             <Feature />
             <div className="card-section">
-                <h1 className="text-center" style={{ marginBottom: "3rem", color: "var(--primary-text-color)" }}>
+                <h1 className="bigfeature-title">
                     Top Destinations
                 </h1>
                 <div className="fl feature-card">
                     {Image_data.map((val, index) => (
-                        <div key={val.id} className="col-md-3 sub-feature-section">
+                        <div key={val.id} className="sub-feature-section">
                             {nCards(val)}
                         </div>
                     ))}
                 </div>
             </div>
             <div className="offer-section">
-                <h1 className="text-center" style={{ marginBottom: "3rem", color: "var(--primary-text-color)" }}>
+                <h1 className="offerSection-title">
                     The BEST OFFERS WITH ROOMS
                 </h1>
                 <div className="fl offer-card">
                     {Offer_data.map((val, index) => (
-                        <div key={val.id} className="col-md-5 sub-offer-section">
+                        <div key={val.id} className="sub-offer-section">
                             {nOffers(val)}
                         </div>
                     ))}
