@@ -1,52 +1,36 @@
 import React from 'react'
-import Styled from 'styled-components';
 import "../style/header.css"
+import {MEDIA_SIZES} from '../Constants/constants';
 
 const Header = () => {
-  const StyleHeaderContainer = Styled.div`
-    height: 44rem;
-    width: 100%;
-    content: "";
-    padding-top: 2rem;
-    background: url(https://cdn.pixabay.com/photo/2018/01/31/12/16/architecture-3121009_1280.jpg);
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-    max-width: 1536px;
-    margin-inline: auto;
-    padding-inline: 0.5rem;
-
-    /* 2xl */
-    @media (max-width: 1536px) {
-    
-    /* xl */
-    @media (max-width: 1280px) {
-        height: 38rem;
+  const imageComponent = MEDIA_SIZES.map(({size}) => {
+    if (size === 525) {
+      return <source
+        media={`(max-width: ${size}px)`}
+        srcSet={`https://res.cloudinary.com/dj9vccr8n/image/upload/v1777803162/mobile-header-image_xm9pa6.png`}
+        key={size}
+      />
     }
-    
-    /* lg */
-    @media (max-width: 1024px) {
-      height: 36rem;
-    }
-    
-    /* md */
-    @media (max-width: 768px) {
-      height: 32rem;
-    }
-    
-    /* sm */
-    @media (max-width: 640px) {
-      height: 28rem;
-    }
-    
-    /* xs */
-    @media (max-width: 475px) {
-        width: 100%;
-        height: 22rem;
-    }
-  `;
+    return <source
+      media={`(max-width: ${size}px)`}
+      srcSet={`https://res.cloudinary.com/dj9vccr8n/image/upload/v1777802499/header-image_phhjzf.jpg`}
+      key={size}
+    />
+  })
   return (
-    <StyleHeaderContainer className='header'>
-    </StyleHeaderContainer>
+    <div className='header-section'>
+      <picture>
+        {imageComponent}
+        <img
+          src={`https://res.cloudinary.com/dj9vccr8n/image/upload/v1777802499/header-image_phhjzf.jpg`}
+          alt="Header"
+          className='header-image'
+          />
+      </picture>
+      <div className='overlay-text'>
+        <h1 className='header-title'>Explore the world with us</h1>
+      </div>
+    </div>
   )
 }
 
