@@ -9,6 +9,7 @@
 
 .feature-card {
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 .sub-feature-section {

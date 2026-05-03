@@ -5,7 +5,7 @@ import "../style/big-feature.css"
 const BigFeature = (props) => {
   return (
     <>
-      <Card className="card-container ">
+      <Card className="card-container">
         <Card.Img variant="top" src={props.imgsrc} className="card-img" />
         <Card.Body>
           <div className="card-title fl">

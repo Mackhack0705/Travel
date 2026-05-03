@@ -102,13 +102,15 @@ const Feature = () => {
   return (
     <form onSubmit={HandleClick}>
       <div className="feature-section">
-        <div className={`hotel-section ${isHotelSelected === true ? "active" : "inactive"}`}
-          onClick={HandleHotels}>
-          <p>Hotels</p>
-        </div>
-        <div className={`flight-section ${isFlightSelected === true ? "active" : "inactive"}`}
-          onClick={HandleFlights}>
-          <p>Flights</p>
+        <div className="switch-section">
+          <div className={`hotel-section ${isHotelSelected === true ? "active" : "inactive"}`}
+            onClick={HandleHotels}>
+            <p>Hotels</p>
+          </div>
+          <div className={`flight-section ${isFlightSelected === true ? "active" : "inactive"}`}
+            onClick={HandleFlights}>
+            <p>Flights</p>
+          </div>
         </div>
 
         <div className="search-section fl">

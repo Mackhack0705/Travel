@@ -1,109 +1,101 @@
 .feature-section {
     height: 5rem;
-    border-top-right-radius: 50px;
-    border-top-left-radius: 50px;
-    /* padding-inline: 2.5rem; */
-    /* justify-content: center; */
     text-align: center;
     margin-bottom: 10rem;
     cursor: pointer;
 }
-
+.switch-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
 .hotel-section {
     height: 100%;
-    display: inline-block;
     width: 50%;
-    /* background-color: var(--primary-btn-color); */
-    padding-top: 1.5rem;
-    border-top-left-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     cursor: pointer;
 }
-
 .flight-section {
     height: 100%;
     width: 50%;
-    display: inline-block;
-    padding-top: 1.5rem;
-    border-top-right-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-
 .active {
     background-color: var(--primary-btn-color);
 }
-
 .inactive {
     background-color: white;
 }
-
 .search-section {
     background: linear-gradient(45deg, #ff9900, #a333ff);
     width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .search-section table {
     margin: 2rem 25rem;
 }
-
 input {
-    /* margin: 10px !important; */
     padding: 5px;
 }
-
 .destination::placeholder {
     color: rgb(0, 0, 0) !important;
 }
-
 .search-section table thead tr th {
-    /* padding-left: 1.5rem; */
     text-align: left ;
     padding: 10px;
 }
-
 .search-section table tbody tr td {
     padding: 10px;
 }
-
 .destination {
     height: 2rem;
     width: 15rem;
 }
-
 .check {
     height: 2rem;
     width: 10rem;
 }
-
 .adult {
     height: 2rem;
     width: 8rem;
 }
-
 .children {
     height: 2rem;
     width: 8rem;
 }
-
 .search {
     position: relative;
     top: 5px;
     border-radius: 50px !important;
     width: 6rem;
 }
-
 .SearchContainer {
     max-width: 1536px;
     margin-inline: auto;
     padding-inline: 0.5rem;
-  }
+}
   
-  /* 2xl */
-  @media (max-width: 1536px) {
+/* 2xl */
+@media (min-width: 1680px) {
+    .feature-section {
+      height: 7rem;
+    }
+}
+@media (max-width: 1536px) {
     .SearchContainer {
       max-width: 1280px;
     }
-  }
+}
   
   /* xl */
-  @media (max-width: 1280px) {
+@media (max-width: 1280px) {
     .SearchContainer {
       max-width: 1024px;
     }
@@ -116,20 +108,20 @@ input {
     .check {
         width: 9rem;
     }
-  }
+}
   
   /* lg */
-  @media (max-width: 1024px) {
+@media (max-width: 1024px) {
     .SearchContainer {
       max-width: 768px;
     }
     .search-section table {
         margin: 2rem 11rem;
     }
-  }
+}
   
   /* md */
-  @media (max-width: 768px) {
+@media (max-width: 768px) {
     .SearchContainer {
       max-width: 640px;
     }
@@ -142,10 +134,10 @@ input {
     .check {
         width: 8rem;
     }
-  }
+}
   
   /* sm */
-  @media (max-width: 640px) {
+@media (max-width: 640px) {
     .SearchContainer {
       max-width: 475px;
     }
@@ -162,10 +154,10 @@ input {
     .search {
         top: 10px;
     }
-  }
+}
   
   /* xs */
-  @media (max-width: 475px) {
+@media (max-width: 475px) {
     .SearchContainer {
       width: 100%;
     }
@@ -178,4 +170,4 @@ input {
     .search {
         width: 5rem;
     }
-  }
+}
