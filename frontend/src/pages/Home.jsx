@@ -2,7 +2,6 @@ import React from 'react'
 import BigFeature from "../components/BigFeature";
 import Feature from "../components/Feature";
 import Nbar from "../components/Nbar";
-import Image_data from "../components/data";
 import Offer from "../components/Offer";
 import Tour from "../components/Tour";
 import Offer_data from "../components/offerdata";
@@ -10,6 +9,7 @@ import Header from "../components/Header";
 import Customers from "../components/Customers";
 import HomeFooter from "../components/HomeFooter";
 import "../pages-style/home.css"
+import {Image_data} from '../Constants/constants';
 
 
 const nCards = (val) => {
