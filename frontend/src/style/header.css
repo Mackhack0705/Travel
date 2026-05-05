@@ -1,5 +1,6 @@
 .header-section {
     position: relative;
+    height: 90vh;
 }
 
 .overlay-text {
@@ -12,11 +13,16 @@
 }
 
 .header-title {
-    font-size: 2.75rem;
+    font-size: 2.5rem;
     font-weight: bold;
     margin-bottom: 1rem;
 }
 
+@media (min-width: 768px) {
+    .header-section {
+        height: 100%;
+    }
+}
 @media (min-width: 1024px) {
     .header-title {
         font-size: 5rem;

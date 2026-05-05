@@ -48,7 +48,7 @@ input {
     color: rgb(0, 0, 0) !important;
 }
 .search-section table thead tr th {
-    text-align: left ;
+    text-align: center;
     padding: 10px;
 }
 .search-section table tbody tr td {

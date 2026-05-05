@@ -7,7 +7,7 @@ const BigFeature = (props) => {
     <>
       <Card className="card-container">
         <Card.Img variant="top" src={props.imgsrc} className="card-img" />
-        <Card.Body>
+        <Card.Body className="container">
           <div className="card-title fl">
             <Card.Title>{props.title}</Card.Title>
             <Card.Text>{props.price}</Card.Text>

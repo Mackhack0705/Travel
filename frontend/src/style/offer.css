@@ -1,34 +1,35 @@
-.offer-title {
+.offerCard-container {
+    width: 100%;
+    border: 1px solid red;
     position: relative;
-    bottom: 25%;
+}
+.offerCard-img {
+    border-top-left-radius: 1.5%;
+    border-top-right-radius: 1.5%;
+}
+.offer-title {
+    position: absolute;
+    top: 30%;
+    left: 0;
     color: #ffff !important;
     background-color: #eab032;
-    font-size: 1.25rem !important;
-    width: 60%;
+    font-size: 1rem;
     padding: 2% 5%;
 }
-
 .offer-price span{
     color: #eab032;
     font-weight: 650;
     font-size: 2rem;
     margin-right: 2%;
 }
-
 .offer-price {
-    font-size: 1rem;
+    font-size: 0.875rem;
+    margin: 0;
 }
-
 .offer-desc {
-    font-size: 1rem  !important;
+    font-size: 0.875rem  !important;
+    line-height: 1.25rem;
 }
-
-.offerCard-container {
-    /* margin: 2rem; */
-    width: 35rem;
-    height: 18rem !important;
-}
-
 .row-style {
     width: 100%;
     height: 100%;
@@ -38,29 +39,8 @@
     width: 100%;
     height: 100%;
 }
+@media (min-width: 768px) {
 
-@media (max-width: 640px) {
-    .offerCard-container {
-        width: 28rem;
-    }
-    .offer-desc {
-        line-height: 1.4rem;
-    }
-  }
-
-  @media (max-width: 475px) {
-    .offerCard-container {
-        width: 100%;
-        height: 14rem !important;
-    }
-    .offer-price span{
-        font-size: 1rem;
-    }
-    .offer-desc {
-        line-height: 1rem;
-        font-size: 0.6rem !important;
-    }
-    .offer-title {
-        font-size: 0.7rem !important;
-    }
-  }
+}
+@media (min-width: 1024px) {
+}

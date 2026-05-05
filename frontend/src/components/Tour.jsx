@@ -2,14 +2,13 @@ import React from "react";
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 import "../style/tour.css";
-import tour from "../videos/tour.mp4"
 
 const Tour = () => {
   return (
     <div>
       <Card className="tour-card">
           <div className="Cols">
-            <video  src={tour} autoPlay controls loop className="video-section">
+            <video  src={'https://res.cloudinary.com/dj9vccr8n/video/upload/v1777975357/tour_zveakl.mp4'} autoPlay controls loop className="video-section">
             </video>
           </div>
           <div className="Cols">

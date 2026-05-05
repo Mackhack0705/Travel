@@ -6,38 +6,32 @@
   margin-bottom: 3rem;
   color: var(--primary-text-color);
 }
-
 .feature-card {
   padding: 2rem;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
   gap: 2rem;
 }
-
 .sub-feature-section {
-
+  width: 100%;
 }
-
 .offer-section {
   padding-block: 2rem;
 }
-
 .offerSection-title {
   text-align: center;
   margin-bottom: 3rem;
   color: var(--primary-text-color);
 }
-
+.sub-offer-section {
+  width: 100%;
+}
 .offer-card {
+  padding: 1rem;
+  gap: 2rem;
   flex-wrap: wrap;
   justify-content: center;
 }
-
-.sub-offer-section {
-  margin: 1rem 2rem;
-
-}
-
 .container {
   max-width: 1536px;
   margin-left: auto;
@@ -53,6 +47,7 @@
     justify-content: space-around;
   }
   .sub-feature-section {
+    width: auto;
   }
 }
 
@@ -72,10 +67,9 @@
   }
   .feature-card {
     justify-content: center;
-    gap: 10rem;
+    gap: 15rem;
   }
   .sub-feature-section {
 
   }
-
 }
