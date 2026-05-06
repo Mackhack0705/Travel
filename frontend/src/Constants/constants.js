@@ -35,7 +35,7 @@ export const Offer_data = [
         imgsrc:"https://res.cloudinary.com/dj9vccr8n/image/upload/v1777968353/grand-castle_g5iwdy.jpg",
         title:"GRAND CASTLE",
         price:"$70",
-        description:"Castle Hotel Ocean Flower Island features a seasonal outdoor swimming pool, garden, a terrace and bar in Danzhou. ",
+        description:"Castle Hotel Ocean Flower Island features a seasonal outdoor swimming pool, a terrace and bar in Danzhou.",
     },
     {
         id:2,

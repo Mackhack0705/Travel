@@ -2,8 +2,6 @@ import React from "react";
 import Card from "react-bootstrap/Card";
 import Button from 'react-bootstrap/Button';
 import "../style/offer.css";
-import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
 
 const Offer = (props) => {
   return (
