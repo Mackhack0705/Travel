@@ -68,12 +68,10 @@
     width: 100%;
     color: #eab032;
 }
-
 .bt {
     width: 37%;
     text-align: center;
 }
-
 @media (min-width: 768px) {
     .main-nav {
         padding: 1.2rem 2rem;

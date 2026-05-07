@@ -39,6 +39,8 @@
   padding-left: 0.5rem;
   padding-right: 0.5rem;
 }
+.tour-section {
+}
 @media (min-width: 768px) {
   .container {
     max-width: 640px;
@@ -52,9 +54,6 @@
   .sub-offer-section {
     width: 90%;
   }
-  .offer-card {
-
-  }
 }
 
 /* lg */
@@ -63,7 +62,7 @@
     max-width: 768px;
   }
   .sub-offer-section {
-    width: 50%;
+    width: 48%;
   }
   .offer-card {
     gap: 2rem;
@@ -78,6 +77,9 @@
   .feature-card {
     justify-content: center;
     gap: 15rem;
+  }
+  .sub-offer-section {
+    width: 30%;
   }
   .offer-card {
     gap: 10rem;

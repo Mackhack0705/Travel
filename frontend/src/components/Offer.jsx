@@ -12,7 +12,7 @@ const Offer = (props) => {
         <Card.Body variant="right">
           <Card.Text className="offer-price"><span>{props.price}</span> per night</Card.Text>
           <Card.Text className="offer-desc">{props.desc}</Card.Text>
-          <Button variant="warning" style={{ color: "#ffff" }}>Book now</Button>
+          <Button variant="warning" style={{ color: "#ffff" }} className="offer-btn">Book now</Button>
         </Card.Body>
       </Card>
     </>

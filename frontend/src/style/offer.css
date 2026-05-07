@@ -47,11 +47,15 @@
         margin-block: 1rem;
     }
 }
-@media (min-width: 1024px) {
-    .offerCard-container {
-
-    }
+@media (min-width: 1680px) {
     .offerCard-img {
-        width: 80%;
+        width: 55%;
+        height: 100% !important;
+    }
+    .offer-desc {
+        margin-block: 0.5rem;
+    }
+    .offer-btn {
+        margin-top: 1rem;
     }
 }
