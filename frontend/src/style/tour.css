@@ -1,6 +1,8 @@
 .tour-card {
-  margin: auto;
-  grid-template-columns: repeat(2, 1fr);
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
 }
 .video-section {
   width: 100%;
@@ -27,11 +29,19 @@
 /* md */
 @media (min-width: 768px) {
   .tour-card {
-    width: 40rem;
-    height: 37rem !important;
+    width: 90%;
+    height: 30rem !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap;
+    margin-inline: auto;
   }
   .video-section {
-    height: 588px;
+    width: 50%;
+    height: 100%;
+  }
+  .tour-body {
+    display: inline;
+    width: 50%;
   }
   .tour-title {
     font-size: 1.7rem !important;
@@ -44,11 +54,7 @@
 /* lg */
 @media (min-width: 1024px) {
   .tour-card {
-    width: 50rem;
-    height: 38rem !important;
-  }
-  .video-section {
-    height: 602px;
+    width: 70%;
   }
   .tour-title {
     font-size: 2rem !important;

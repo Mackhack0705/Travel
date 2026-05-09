@@ -9,7 +9,7 @@ const Tour = () => {
       <Card className="tour-card">
           <video  src={'https://res.cloudinary.com/dj9vccr8n/video/upload/v1777975357/tour_zveakl.mp4'} autoPlay loop className="video-section">
           </video>
-          <Card.Body style={{paddingBlock: "5rem"}}>
+          <Card.Body className="tour-body">
             <Card.Title className="tour-title">Take a look at Tour video</Card.Title>
             <Card.Text className="tour-desc">
               Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts, Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. <br /><br />
