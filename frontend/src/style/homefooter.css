@@ -1,27 +1,40 @@
 .footer-section {
-    padding-block: 1%;
 }
-
+.brand-section {
+    width: 100%;
+}
+.logo-section {
+    padding: 1rem 0 0 1rem;
+    width: 50%;
+}
+.contact-section {
+    margin-top: 10px;
+    gap: 2.5rem;
+    padding: 1rem;
+}
+.app-section {
+    flex-wrap: wrap;
+    padding-inline: 0rem;
+}
+.store {
+    width: 350px;
+    height: 120px;
+}
+.links-section {
+    width: 100%;
+    padding: 1rem;
+}
+.link-heading {
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+.links-section a {
+    color: black;
+}
 .footer-table {
     border-collapse: collapse;
     margin: auto;
     table-layout: fixed;
     width: 60%;
     
-}
-
-td {
-    padding-left: 2%;
-    padding: 0.5% 2%;
-}
-
-td a {
-    color: var(--secondary-text-color) !important;
-}
-
-.contact-logo {
-    margin: 0.5rem;
-}
-.footer-table tr th {
-    padding-left: 1rem;
 }
