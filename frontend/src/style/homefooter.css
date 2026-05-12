@@ -31,10 +31,68 @@
 .links-section a {
     color: black;
 }
-.footer-table {
-    border-collapse: collapse;
-    margin: auto;
-    table-layout: fixed;
-    width: 60%;
-    
+
+@media (min-width: 768px) {
+    .brand-section {
+        display: flex;
+        justify-content: space-around;
+        position: relative;
+        padding-inline: 2rem;
+    }
+    .logo-section {
+        width: 40%;
+    }
+    .contact-section {
+        position: absolute;
+        top: 95%;
+        left: 10%;
+        gap: 3rem;
+    }
+    .app-section {
+        width: 40%;
+    }
+    .links-section {
+        display: flex;
+        justify-content: space-around;
+        padding-top: 6rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .footer-section {
+        display: flex;
+    }
+    .brand-section {
+        display: flex;
+        flex-wrap: wrap;
+        padding-inline: 2rem;
+        width: 50%;
+        justify-content: space-between;
+    }
+    .logo-section {
+        width: 20%;
+    }
+    .contact-section {
+        position: relative;
+        top: 0;
+        left: 0;
+        gap: 2rem;
+        width: 50%;
+        justify-content: center;
+    }
+    .app-section {
+        width: 100%;
+        flex-wrap: nowrap;
+    }
+    .store {
+        width: 40%;
+        height: 100px;
+    }
+    .links-section {
+        width: 50%;
+        padding-top: 1rem;
+    }
+    .link-heading {
+        margin-bottom: 1rem;
+    }
 }

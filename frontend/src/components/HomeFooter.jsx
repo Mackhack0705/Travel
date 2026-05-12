@@ -29,8 +29,6 @@ const HomeFooter = () => {
             <p><a href="#AirlineFees">Airlinefees</a></p>
         </div>
         <div>
-        </div>
-        <div>
             <p className='link-heading'>Contact</p>
             <p><a href="#Career">Careers</a></p>
             <p><a href="#Press">Press</a></p>
