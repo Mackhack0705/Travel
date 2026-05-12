@@ -17,8 +17,8 @@ const HomeFooter = () => {
           <FaFacebook className='contact-logo' size={40}/>
         </div>
         <div className='fl app-section'>
-          <img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="" className='store'/>
-          <img width="280" height="100" src="https://w7.pngwing.com/pngs/1015/380/png-transparent-app-store-logo-iphone-app-store-google-play-apple-app-store-electronics-text-logo.png" alt="" className=''/>
+          <img src="https://res.cloudinary.com/dj9vccr8n/image/upload/v1778564835/google-play_aatol2.png" alt="" className='store'/>
+          <img src="https://res.cloudinary.com/dj9vccr8n/image/upload/v1778565090/app-store_z3z39d.png" alt="" className='store' style={{padding: '1.2rem'}}/>
         </div>
       </div>
       <div className='links-section'>
