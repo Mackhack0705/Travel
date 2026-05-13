@@ -67,7 +67,7 @@
         flex-wrap: wrap;
         padding-inline: 2rem;
         width: 50%;
-        justify-content: space-between;
+        justify-content: start;
     }
     .logo-section {
         width: 20%;
@@ -79,6 +79,7 @@
         gap: 2rem;
         width: 50%;
         justify-content: center;
+        margin-left: 5rem;
     }
     .app-section {
         width: 100%;
@@ -94,5 +95,43 @@
     }
     .link-heading {
         margin-bottom: 1rem;
+    }
+}
+
+@media (min-width: 1680px) {
+    .brand-section {
+        position: relative;
+    }
+    .logo-section {
+        width: 30%;
+        /* height: 100%; */
+    }
+    .contact-section {
+        margin-left: 0rem;
+        width: 65%;
+        height: 50%;
+        gap: 5rem;
+        margin-left: 3rem;
+        justify-content: start;
+    }
+    .contact-logo {
+        scale: 1.2;
+    }
+    .app-section {
+        position: absolute;
+        top: 40%;
+        left: 35%;
+        width: 50%;
+        height: 50%;
+    }
+    #app-store-img {
+        padding: 0.98rem !important;
+    }
+    .link-heading {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+    }
+    .links-section a {
+        font-size: 2rem
     }
 }

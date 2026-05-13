@@ -18,7 +18,7 @@ const HomeFooter = () => {
         </div>
         <div className='fl app-section'>
           <img src="https://res.cloudinary.com/dj9vccr8n/image/upload/v1778564835/google-play_aatol2.png" alt="" className='store'/>
-          <img src="https://res.cloudinary.com/dj9vccr8n/image/upload/v1778565090/app-store_z3z39d.png" alt="" className='store' style={{padding: '1.2rem'}}/>
+          <img src="https://res.cloudinary.com/dj9vccr8n/image/upload/v1778565090/app-store_z3z39d.png" alt="" id='app-store-img' className='store' style={{padding: '1.2rem'}}/>
         </div>
       </div>
       <div className='links-section'>
