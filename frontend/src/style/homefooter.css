@@ -108,10 +108,10 @@
     }
     .contact-section {
         margin-left: 0rem;
-        width: 65%;
+        width: 60%;
         height: 50%;
         gap: 5rem;
-        margin-left: 3rem;
+        margin-left: 2rem;
         justify-content: start;
     }
     .contact-logo {
@@ -119,9 +119,9 @@
     }
     .app-section {
         position: absolute;
-        top: 40%;
+        top: 45%;
         left: 35%;
-        width: 50%;
+        width: 60%;
         height: 50%;
     }
     #app-store-img {
