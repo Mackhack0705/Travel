@@ -1,1 +1,1 @@
-export const BASE_URL = "https://travelsitebackend-8dsr.onrender.com"
+export const BASE_URL = "https://travel-backend-ueu6.onrender.com"
